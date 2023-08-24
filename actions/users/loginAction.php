@@ -10,7 +10,7 @@
 
         //code des donnnées de l'utilisateur...
 		$email = htmlspecialchars($_POST['email']);
-		$mdp = htmlspecialchars($_POST['mdp'], PASSWORD_DEFAULT);
+		$mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
         
         //code pour vérifier si l'email de cet utilisateur existe déjà...
 		$checkIfUsersAlreadyExists = $bd ->prepare('SELECT * FROM users WHERE email = ?');

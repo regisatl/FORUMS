@@ -10,7 +10,7 @@
 
 <?php include ('includes/head.php');  ?>
 
-<body>
+<body class="container">
 
  <?php include('includes/navbar.php'); ?>
  <br><br><br>
