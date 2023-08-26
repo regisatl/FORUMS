@@ -1,8 +1,8 @@
 
 <?php 
   require('actions/users/securityAction.php'); 
-  require('actions/questions/getInfosEditedQuestionsAction.php');
-  require('actions/questions/editQuestionsAction.php');
+  require('actions/questions/getInfosEditedMessagesAction.php');
+  require('actions/questions/editMessagesAction.php');
  
      
 ?>

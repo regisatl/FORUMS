@@ -10,7 +10,7 @@ if (isset($_POST['valider'])) {
 
 		//code des donnnées de l'utilisateur...
 		$email = htmlspecialchars($_POST['email']);
-		$mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+		$mdp = htmlspecialchars($_POST['mdp']);
 
 		//code pour vérifier si l'email de cet utilisateur existe déjà...
 		$checkIfUsersAlreadyExists = $bd->prepare('SELECT * FROM users WHERE email = ?');
@@ -32,7 +32,7 @@ if (isset($_POST['valider'])) {
 				$_SESSION['email'] = $UsersInfos['email'];
 
 				//code pour rediriger l'utilisateur vers la page d'accueil...    
-				header('Location: index.php');
+				header('Location: ./');
 
 
 			} else {

@@ -1,7 +1,7 @@
 <?php 
 require('actions/database.php');
 
-if(isset($_POST['valider'])){
+if(isset($_POST['valider'])){	
 
 	if(!empty($_POST['reponse'])){
 

@@ -1,4 +1,4 @@
-<nav class="container navbar fixed-top navbar-expand-lg navbar-dark bg-dark rounded mt-3 py-3">
+<nav class="container navbar fixed-top navbar-expand-lg navbar-dark bg-dark rounded mt-1 mb-5 py-3">
       <div class="container-fluid fw-bold logo">
             <a class="navbar-brand" href="#">CHATS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -7,15 +7,21 @@
                   <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:0.8rem;">
                         <li class="nav-item">
                               <a class="nav-link" aria-current="page" href="index.php">ACCUEIL</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="publishQuestion.php">ECRIRE</a>
+                              <a class="nav-link" href="publishMessage.php">ECRIRE</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="mesQuestions.php">MESSAGES</a>
+                              <a class="nav-link" href="mesMessages.php">MESSAGES</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="signup.php">S'INSCRIRE</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="login.php">SE CONNECTER</a>
                         </li>
                         <?php
                         if (isset($_SESSION['auth'])) {
@@ -30,7 +36,7 @@
                         }
                         ?>
                   </ul>
-                  <?php require('actions/questions/showAllQuestionsAction.php'); ?>
+                  <?php require('actions/questions/showAllMessagesAction.php'); ?>
                   <form class="d-flex">
                         <input class="form-control fw-bold me-2" type="search" name="search" placeholder="Rechercher"
                               aria-label="Search">

@@ -18,12 +18,9 @@ if(isset($_POST['valider'])){
 		$editNewQuestion->execute(array($newQuestionTitre, $newQuestionDescription, $newQuestionContenu, $idQuestions));
 
 //Rediriger la page d'affichage des questions à l'utilisateur...
-		header('Location: mesQuestions.php'); 
+		header('Location: mesMessages.php'); 
 
 	}else{
 		$errorMsg = "veuillez remplir tous les champs...";
 	}
 }
-
-
-?>

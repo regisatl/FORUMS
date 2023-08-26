@@ -20,7 +20,7 @@
 			$deleteQuestions = $bd->prepare('DELETE FROM questions WHERE id = ?');
 			$deleteQuestions->execute(array($idQuestions));
 
-			header('Location: ../../mesQuestions.php');
+			header('Location: ../../mesMessages.php');
 
 
 		}else{

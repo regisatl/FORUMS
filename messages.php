@@ -9,10 +9,9 @@ require('actions/questions/showAllReponsesAction.php');
 <html>
 <?php include('includes/head.php'); ?>
 
-<body>
+<body class="mt-5 mb-3">
 	<?php include('includes/navbar.php'); ?>
-	<br><br><br><br>
-	<div class="container">
+	<div class="container pt-5">
 		<?php
 
 		if (isset($questionDate)) {

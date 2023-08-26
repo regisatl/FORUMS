@@ -28,8 +28,8 @@ if (isset($_POST['valider'])) {
 			$successMsg = "Vos données ont été bien envoyées...";
 
 			//code pour récupérer les données de l'utilisateur...
-			$getInfosUsers = $bd->prepare('SELECT id, email, nom, prenom numero, mdp FROM users WHERE nom = ?, prenom = ?');
-			$getInfosUsers->execute(array($email, $nom, $prenom, $numero, $mdp));
+			$getInfosUsers = $bd->prepare('SELECT id, email, nom, prenom numero, mdp FROM users WHERE email = ? AND nom = ? AND prenom = ? AND numero = ?');
+			$getInfosUsers->execute(array($email, $nom, $prenom, $numero));
 
 			$UsersInfos = $getInfosUsers->fetch();
 
