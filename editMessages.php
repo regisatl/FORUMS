@@ -1,20 +1,19 @@
 
 <?php 
-  require('actions/users/securityAction.php'); 
-  require('actions/questions/getInfosEditedMessagesAction.php');
-  require('actions/questions/editMessagesAction.php');
+  require('../actions/users/securityAction.php'); 
+  require('../actions/questions/getInfosEditedMessagesAction.php');
+  require('../actions/questions/editMessagesAction.php');
  
      
 ?>
 
 <!DOCTYPE html>
 <html>
-<?php include('includes/head.php'); ?>
+<?php include('../includes/head.php'); ?>
 <body>
-<?php include('includes/navbar.php'); ?>
+<?php include('../includes/navbar.php'); ?>
 
-  <br><br><br>
-  <div class="container">
+  <div class="container mt-5 pt-5">
   		<?php if(isset($errorMsg)){ echo '<p class="text-danger">'.$errorMsg.'</p>';} ?>
 
   		<?php if(isset($questionDate)){
@@ -44,7 +43,7 @@
 
 </div>
 
-<?php include('includes/footer.php'); ?>
+<?php include('../includes/footer.php'); ?>
 			
 </body>
 </html>

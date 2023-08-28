@@ -9,7 +9,7 @@ require('actions/questions/showAllReponsesAction.php');
 <html>
 <?php include('includes/head.php'); ?>
 
-<body class="mt-5 mb-3">
+<body class="mt-3 mb-3">
 	<?php include('includes/navbar.php'); ?>
 	<div class="container pt-5">
 		<?php
@@ -52,12 +52,16 @@ require('actions/questions/showAllReponsesAction.php');
 							<a href="profile.php?id= <?= $reponse['idAuteur']; ?>"><?= $reponse['emailAuteur']; ?></a>
 						</div>
 						<div class="card-body">
-							<blockquote class="blockquote mb-0">
+							<blockquote class="blockquote mb-1">
 								<p>
 									<?= $reponse['reponse']; ?>
 								</p>
-								<br>
 							</blockquote>
+						</div>
+						<div class="card-footer">
+							<p>
+								<?= 'Répondu à '.date('H:m:s').' le '.date('d/M/Y'); ?>
+							</p>
 						</div>
 					</div>
 					<br>
@@ -67,7 +71,7 @@ require('actions/questions/showAllReponsesAction.php');
 
 				?>
 			</section>
-		<?php
+			<?php
 		}
 
 		?>

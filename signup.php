@@ -43,11 +43,15 @@ require('actions/users/signupAction.php'); ?>
                         <input type="password" class="form-control" name="mdp" placeholder="Entrez votre password">
                         <label for="Password" class="form-label">Entrez votre password</label>
                   </div>
-                  <button type="submit" class="btn btn-primary fw-bold w-100 py-3" name="valider">S'inscrire</button>
-                  <br><br>
-                  <a href="login.php">
-                        <p>J'ai déjà un compte, Je me connecte...</p>
-                  </a>
+                  <div class="mb-3">
+                        <button type="submit" class="btn btn-primary fw-bold w-100 py-3"
+                              name="valider">S'inscrire</button>
+                  </div>
+                  <div class="button-group">
+                        <a href="login.php">
+                              <p>J'ai déjà un compte, Je me connecte...</p>
+                        </a>
+                  </div>
       </form>
 
 </body>

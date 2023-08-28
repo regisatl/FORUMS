@@ -11,7 +11,7 @@
          $questionTitre = htmlspecialchars($_POST['titre']);
          $questionDescription = nl2br(htmlspecialchars($_POST['description']));
          $questionContenu = nl2br(htmlspecialchars($_POST['contenu']));
-         $questionDate = date('d/m/Y');
+         $questionDate = date('H:m:s'). ' le '. date('d/M/Y');
          $questionIdAuteur = $_SESSION['id'];
          $questionEmailAuteur = $_SESSION['email'];
 

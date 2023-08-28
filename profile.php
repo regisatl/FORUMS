@@ -7,37 +7,55 @@ require('actions/users/showProfilesUsersAction.php');
 <html>
 <?php include('includes/head.php'); ?>
 
-<body class="container mt-5 pt-5">
+<body class="container mt-3">
 	<?php include('includes/navbar.php'); ?>
-	<div class="mt-5">
-
+	<div class="mt-3">
+	<h1 class="fs-4 mb-3 fw-bold text-center text-uppercase">Profil</h1>
 		<?php
 		if (isset($errorMsg)) {
-		?>
+			?>
 			<div class="alert alert-danger" role="alert">
-			<?php echo $errorMsg;
+				<?php echo $errorMsg;
 		}
 
 		if (isset($getAllProfileUsers)) {
 
 			?>
 			</div>
-			<div class="card">
+			<div class="card mb-3">
 				<div class="card-body text-center">
-					<h4 class="text-dark">
+					<h2 class="fw-bold text-black">
 						<?= $nom . '   ' . $prenom; ?>
-					</h4>
-					<br>
-					<h4 class="">E-mail: <a href="mailto:<?= $email; ?>"><?= $email; ?></a></h4>
-					<h4 class="">Téléphone: <a href="tel:+229<?= $numero; ?>"><?= $numero; ?></a></h4>
+					</h2>
+
+					<h4 class=""><span class="text-decoration-underline">Email</span>: <a class="text-decoration-none" href="mailto:<?= $email; ?>"><?= $email; ?></a></h4>
+					<h4 class=""><span class="text-decoration-underline">Téléphone</span>: <a class="text-decoration-none" href="tel:+229<?= $numero; ?>"><?= $numero; ?></a></h4>
+				</div>
+				<div class="card-footer text-center mt-3 mb-0">
+					<a href="https://www.facebook.com" class="facebook text-decoration-none text-primary mx-2" title="facebook" target="_blank"><i
+							class="fa fa-facebook fa-2x"></i>
+					</a>
+					<a href="https://www.twitter.com" class="twitter text-decoration-none text-primary mx-2" title="twitter" target="_blank"><i
+							class="fa fa-twitter fa-2x"></i>
+					</a>
+					<a href="https://www.skype.com" class="skype text-decoration-none text-info mx-2" title="skype" target="_blank"><i
+							class="fa fa-skype fa-2x"></i>
+					</a>
+					<a href="https://www.linkedin.com" class="linkedin text-decoration-none text-info mx-2" title="linkedin" target="_blank"><i
+							class="fa fa-linkedin fa-2x"></i>
+					</a>
+					<a href="https://www.youtube.com" class="youtube text-decoration-none text-danger mx-2" title="youtube" target="_blank"><i
+							class="fa fa-youtube fa-2x"></i>
+					</a>
+					<a href="https://www.instagram.com" class="instagram text-decoration-none text-black mx-2" title="instagram" target="_blank"><i
+							class="fa fa-instagram fa-2x"></i>
+					</a>
 				</div>
 			</div>
-			<br>
+		
 			<?php
-
 			while ($questions = $getAllProfileUsers->fetch()) {
 			?>
-
 				<div class="card mb-3">
 					<div class="card-header">
 						<a href="messages.php?id=<?= $questions['id']; ?>">
@@ -58,8 +76,7 @@ require('actions/users/showProfilesUsersAction.php');
 						</blockquote>
 					</div>
 				</div>
-
-		<?php
+				<?php
 			}
 		}
 

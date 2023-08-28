@@ -13,25 +13,21 @@ require('actions/questions/publishMessageAction.php');
 
 	<?php include('includes/navbar.php'); ?>
 
-
 	<form class="container mt-5 pt-5" method="POST">
 
 		<?php
 		if (isset($errorMsg)) {
 		?>
 			<div class="alert alert-danger" role="alert">
-			<?php 	//code...
-			echo $errorMsg;
+				<?php
+				echo $errorMsg;
 		} elseif (isset($successMsg)) {
-			?>
+				?>
 				<div class="alert alert-success" role="alert">
 				<?php
-				// code...
-				echo $successMsg;
-			}
-
-				?>
-
+					echo $successMsg;
+		}
+		?>
 				<div class="form-floating mt- 5 mb-3">
 					<input type="text" class="form-control" name="titre">
 					<label for="titre" class="form-label">Titre du message</label>
