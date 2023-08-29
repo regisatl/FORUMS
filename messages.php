@@ -16,7 +16,7 @@ require('actions/questions/showAllReponsesAction.php');
 
 		if (isset($questionDate)) {
 			?>
-			<section class="show-content">
+			<section class="show-content mb-3">
 
 				<h3>
 					<?= $questionTitre; ?>
@@ -31,23 +31,13 @@ require('actions/questions/showAllReponsesAction.php');
 						<?='<a href="profile.php?id=' . $questionIdAuteur . '">' . $questionEmailAuteur . '</a> &nbsp' . $questionDate; ?>
 					</em></small>
 			</section>
-			<br>
+			
 			<section class="show-answers">
-				<form class="form-group" method="POST">
-					<div class="mb-3">
-						<label for="text" class="form-label"><strong>Réponse:</strong></label>
-						<textarea type="text" class="form-control" name="reponse" placeholder=""
-							required=""></textarea>
-						<br>
-						<button class="btn btn-primary" type="submit" name="valider">Envoyer</button>
-					</div>
-				</form>
-
 				<?php
 
 				while ($reponse = $getAllReponses->fetch()) {
 					?>
-					<div class="card">
+					<div class="card mb-3">
 						<div class="card-header">
 							<a href="profile.php?id= <?= $reponse['idAuteur']; ?>"><?= $reponse['emailAuteur']; ?></a>
 						</div>
@@ -64,12 +54,18 @@ require('actions/questions/showAllReponsesAction.php');
 							</p>
 						</div>
 					</div>
-					<br>
-
 					<?php
 				}
-
 				?>
+					<form class="form-group" method="POST">
+					<div class="mb-3">
+						<label for="text" class="form-label"><strong>Réponse:</strong></label>
+						<textarea type="text" class="form-control" name="reponse" placeholder=""
+							required=""></textarea>
+						<br>
+						<button class="btn btn-primary fw-bold w-100" type="submit" name="valider">Envoyer</button>
+					</div>
+				</form>
 			</section>
 			<?php
 		}

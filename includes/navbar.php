@@ -1,4 +1,4 @@
-<nav class="container navbar position-sticky top-0 z-1 navbar-expand-lg navbar-light bg-light shadow-lg rounded mt-3 mb-3 py-3">
+<nav class="container navbar position-sticky top-0 z-1 navbar-expand-lg bg-primary shadow-lg rounded mt-3 mb-3 py-3">
       <div class="container-fluid fw-bold logo">
             <a class="navbar-brand" href="#">CHATS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:0.8rem;">
                         <li class="nav-item col-sm-4">
-                              <a class="nav-link" aria-current="page" href="../" title="Accueil"><span
+                              <a class="nav-link" aria-current="page" href="./" title="Accueil"><span
                                           class="fas fa-home fa-2x"></span></a>
                         </li>
                         <li class="nav-item col-sm-4">
@@ -32,7 +32,7 @@
                   <form class="d-flex">
                         <input class="form-control fw-bold me-2" type="search" name="search" placeholder="Rechercher"
                               aria-label="Search">
-                        <button class="btn btn-outline-primary fw-bold" type="submit">Rechercher</button>
+                        <button class="btn btn-outline-dark fw-bold" type="submit">Rechercher</button>
                   </form>
                   <?php
                   if (isset($_SESSION['auth'])) {

@@ -12,7 +12,7 @@ if (isset($_GET['search']) and !empty($_GET['search'])) {
 	$UsersSearch = $_GET['search'];
 
 	//Récupérer les questions qui correspondent à la recherche en fonction de la demande...
-	$getAllQuestions = $bd->query("SELECT id, idAuteur, titre, description, emailAuteur, datePublication FROM questions WHERE titre LIKE ''%$UsersSearch%'' ORDER BY id DESC");
+	$getAllQuestions = $bd->query("SELECT id, idAuteur, titre, contenu, description, emailAuteur, datePublication FROM questions WHERE titre LIKE '%$UsersSearch%' ORDER BY id DESC");
 
 }
 ?>

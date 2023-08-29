@@ -1,16 +1,3 @@
-*,
-*::after,
-*::before {
-      box-sizing: border-box;
-}
 
-body {
-      font-family: 'Poppins';
-      font-size: 1 rem;
-}
-
-ul a{
-      color:black;
-}
 
 

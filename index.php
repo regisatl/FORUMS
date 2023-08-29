@@ -18,31 +18,39 @@ require('actions/questions/postReponseAction.php');
         <?php
         while ($questions = $getAllQuestions->fetch()) {
             ?>
-            <div class="card mb-3">
+            <div class="card mb-3" id="accordion">
+
                 <div class="card-header">
-                    <a href="messages.php?id=<?= $questions['id']; ?>">
-                        <?= $questions['titre']; ?>
-                    </a>
+                    <div class="d-flex justify-content-between">
+                        <a class="fw-semibold" href="messages.php?id=<?= $questions['id']; ?>">
+                            <?= $questions['titre']; ?>
+                        </a>
+                        <a class="btn text-success fw-semibold" data-bs-toggle="collapse" href="#collapseOne">
+                            Toogle
+                        </a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>
-                            <?= $questions['description']; ?>
-                        </p>
-                        <p>
-                            <?= $questions['contenu']; ?>
-                        </p>
-                        <br>
-                        <footer class="blockquote-footer"> Publié par
-                            <a href="profile.php?id= <?= $questions['idAuteur']; ?>">
-                                        <em>
-                                        <?=$questions['emailAuteur']; ?>
-                                        </em>
-                            </a> <cite title="Source Title"> à
-                                <?= date('H:m:s').' le '.date('d/m/Y') ?>;
-                            </cite>
-                        </footer>
-                    </blockquote>
+                <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                <?= $questions['description']; ?>
+                            </p>
+                            <p>
+                                <?= $questions['contenu']; ?>
+                            </p>
+                            <br>
+                            <footer class="blockquote-footer"> Publié par
+                                <a href="profile.php?id= <?= $questions['idAuteur']; ?>">
+                                    <em>
+                                        <?= $questions['emailAuteur']; ?>
+                                    </em>
+                                </a> <cite title="Heure d'envoi du message"> à
+                                    <?= $questions['datePublication']; ?>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
             <?php

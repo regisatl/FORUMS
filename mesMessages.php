@@ -1,24 +1,24 @@
 <?php
-require('../actions/users/securityAction.php');
-require('../actions/questions/mesMessagesAction.php');
+require('actions/users/securityAction.php');
+require('actions/questions/mesMessagesAction.php');
 
 
 ?>
 <!DOCTYPE html>
 <html>
-<?php include('../includes/head.php'); ?>
+<?php include('includes/head.php'); ?>
 
 <body class="mt-5 mb-3">
 
-	<?php include('../includes/navbar.php'); ?>
+	<?php include('includes/navbar.php'); ?>
 
 	<div class="container pt-5">
 		<?php
 		while ($questions = $getToutMesQuestions->fetch()) {
 			?>
-			<div class="card">
+			<div class="card mt-3">
 				<h5 class="card-header">
-					<a href="../messages/?id=<?= $questions['id']; ?>">
+					<a href="messages.php?id=<?= $questions['id']; ?>">
 						<?= $questions['titre']; ?>
 					</a>
 				</h5>
@@ -41,9 +41,6 @@ require('../actions/questions/mesMessagesAction.php');
 				</div>
 
 			</div>
-			<br>
-
-
 			<?php
 		}
 		?>

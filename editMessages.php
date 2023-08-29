@@ -34,7 +34,7 @@
 					   <textarea class="form-control" name="contenu"><?= $questionContenu; ?>
 					   </textarea>
 					</div>
-					  <button type="submit" class="btn btn-primary" name="valider">Modifier votre message</button>
+					  <button type="submit" class="btn btn-primary fw-bold w-100" name="valider">Modifier votre message</button>
 	    </form>
 
       <?php 
