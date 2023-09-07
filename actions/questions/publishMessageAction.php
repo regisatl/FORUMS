@@ -13,7 +13,6 @@ if (isset($_POST['valider'])) {
       $questionDescription = nl2br(htmlspecialchars($_POST['description']));
       $questionContenu = nl2br(htmlspecialchars($_POST['contenu']));
       $questionDate = date("H:i:s d-m-Y");
-      // echo $dateNow;
       $questionIdAuteur = $_SESSION['id'];
       $questionEmailAuteur = $_SESSION['email'];
 

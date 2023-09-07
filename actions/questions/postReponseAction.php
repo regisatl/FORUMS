@@ -9,6 +9,7 @@ if(isset($_POST['valider'])){
 
 		$insertReponse = $bd->prepare('INSERT INTO reponses(idAuteur, emailAuteur, idQuestion, reponse) VALUES(?, ?, ?, ?)');
 		$insertReponse->execute(array($_SESSION['id'], $_SESSION['email'], $idQuestions, $UsersReponse));
+		
 	} 
 }
 ?>

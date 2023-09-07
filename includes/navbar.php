@@ -1,6 +1,7 @@
-<nav class="container navbar position-sticky top-0 z-1 navbar-expand-lg bg-primary shadow-lg rounded mt-3 mb-3 py-3">
+<nav
+      class="container navbar position-sticky top-0 z-1 navbar-expand-lg bg-light bg-gradient shadow-lg rounded mt-3 mb-3 py-3">
       <div class="container-fluid fw-bold logo">
-            <a class="navbar-brand" href="#">CHATS</a>
+            <a class="navbar-brand text-dark fs-3" href="#">CHATS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>

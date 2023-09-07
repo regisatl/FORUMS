@@ -31,7 +31,7 @@ require('actions/questions/showAllReponsesAction.php');
 						<?='<a href="profile.php?id=' . $questionIdAuteur . '">' . $questionEmailAuteur . '</a> &nbsp' . $questionDate; ?>
 					</em></small>
 			</section>
-			
+
 			<section class="show-answers">
 				<?php
 
@@ -48,22 +48,23 @@ require('actions/questions/showAllReponsesAction.php');
 								</p>
 							</blockquote>
 						</div>
-						<div class="card-footer">
-							<p>
-								<?= 'Répondu à '.date('H:m:s').' le '.date('d/M/Y'); ?>
-							</p>
-						</div>
+						<footer class="blockquote-footer ms-3 mt-2">
+							<cite title="Date d'envoi du message">  Publié le 
+								<?= date("d-m-Y"); ?>
+							</cite>
+						</footer>
 					</div>
 					<?php
 				}
 				?>
-					<form class="form-group" method="POST">
+				<form class="form-group" method="POST">
 					<div class="mb-3">
 						<label for="text" class="form-label"><strong>Réponse:</strong></label>
 						<textarea type="text" class="form-control" name="reponse" placeholder=""
 							required=""></textarea>
 						<br>
-						<button class="btn btn-primary fw-bold w-100" type="submit" name="valider">Envoyer</button>
+						<button class="btn btn-primary bg-gradient fw-bold py-3 w-100" type="submit"
+							name="valider">Envoyer</button>
 					</div>
 				</form>
 			</section>

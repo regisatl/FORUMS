@@ -8,7 +8,7 @@ require('actions/questions/mesMessagesAction.php');
 <html>
 <?php include('includes/head.php'); ?>
 
-<body class="mt-5 mb-3">
+<body>
 
 	<?php include('includes/navbar.php'); ?>
 
@@ -17,10 +17,26 @@ require('actions/questions/mesMessagesAction.php');
 		while ($questions = $getToutMesQuestions->fetch()) {
 			?>
 			<div class="card mt-3">
-				<h5 class="card-header">
-					<a href="messages.php?id=<?= $questions['id']; ?>">
-						<?= $questions['titre']; ?>
-					</a>
+				<h5 class="card-header fw-semibold d-flex justify-content-between">
+					<div class="btn-group">
+						<a href="messages.php?id=<?= $questions['id']; ?>">
+							<?= $questions['titre']; ?>
+						</a>
+					</div>
+					<div class="dropdown">
+						<a class="btn btn-secondary dropdown-toggle fw-bold" href="#" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Actions
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item fw-semibold" href="publishMessage.php">Message</a></li>
+							<li><a class="dropdown-item fw-semibold"
+									href="editMessages.php?id= <?= $questions['id']; ?>">Modifier</a></li>
+							<li><a class="dropdown-item fw-semibold"
+									href="actions/questions/deleteMessagesAction.php?id= <?= $questions['id']; ?>">Supprimer</a>
+							</li>
+						</ul>
+					</div>
 				</h5>
 				<div class="card-body">
 					<p class="card-text">
@@ -30,14 +46,11 @@ require('actions/questions/mesMessagesAction.php');
 						<?= $questions['contenu']; ?>
 					</p>
 				</div>
-				<div class="card-footer d-flex justify-content-around">
-					<a href="publishMessage.php" class="btn btn-primary" title="Accéder au message"><span
-							class="fas fa-plus-square"></span></a>
-					<a href="editMessages.php?id= <?= $questions['id']; ?>" class="btn btn-warning"
-						title="Modifier mon message"><span class="fas fa-edit"></span></a>
-					<a href="actions/questions/deleteMessagesAction.php?id= <?= $questions['id']; ?>"
-						class="btn btn-danger" title="Supprimer mon message"><span
-							class="fas fa-trash"></span></a>
+
+				<div class="card-footer">
+					<em class="blockquote-footer pt-3">
+						Message publier à <strong><?= $questions['datePublication']; ?></strong>
+					</em>
 				</div>
 
 			</div>

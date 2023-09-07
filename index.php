@@ -14,7 +14,7 @@ require('actions/questions/postReponseAction.php');
     <?php include('includes/navbar.php'); ?>
 
     <div class="container mt-5 mb-3">
-        <h1 class="mt-3 mb-3 text-center text-uppercase fs-2 fw-bold">Tous les messages</h1>
+        <h1 class="mt-3 mb-3 text-center text-uppercase text-secondary fs-2 fw-bold">Tous les messages</h1>
         <?php
         while ($questions = $getAllQuestions->fetch()) {
             ?>
